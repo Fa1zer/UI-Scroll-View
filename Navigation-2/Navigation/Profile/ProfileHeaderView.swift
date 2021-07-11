@@ -16,6 +16,7 @@ class ProfileHeaderView: UIView {
     @IBOutlet weak var setStatusButton: UIButton!
     
     var statusText = String()
+    //var colorSet = UIColor().colorFromHex(hex: "#4885CC")
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -28,6 +29,8 @@ class ProfileHeaderView: UIView {
         setStatusButton.layer.borderColor = UIColor.black.cgColor
         setStatusButton.layer.shadowOpacity = 0.7
         setStatusButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        statusTextField.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5, constant: 37.355).isActive = true
+    
     }
     
     @objc func buttonPressed() {
@@ -40,3 +43,4 @@ class ProfileHeaderView: UIView {
         statusText = textField.text ?? statusLabel.text!
     }
 }
+
