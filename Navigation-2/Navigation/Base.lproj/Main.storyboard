@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="428" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baby Yoda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fa1-z2-gaX">
-                                        <rect key="frame" x="168.66666666666666" y="27" width="90.999999999999972" height="22"/>
+                                        <rect key="frame" x="169" y="27" width="90.333333333333314" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="O2A-jx-hlo"/>
                                         </constraints>
@@ -43,13 +43,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for something..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naK-7k-ywa">
-                                        <rect key="frame" x="168.66666666666666" y="84" width="153.99999999999997" height="17"/>
+                                        <rect key="frame" x="169" y="84" width="239" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OzW-7r-h3O">
-                                        <rect key="frame" x="168.66666666666663" y="112" width="243.33333333333337" height="40"/>
+                                        <rect key="frame" x="169" y="112" width="243" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="4zw-hR-Xzv"/>
                                         </constraints>
@@ -93,7 +93,7 @@
                                     <constraint firstItem="OzW-7r-h3O" firstAttribute="top" secondItem="naK-7k-ywa" secondAttribute="bottom" constant="11" id="1VT-LN-aoD"/>
                                     <constraint firstItem="Wtp-NF-gR1" firstAttribute="top" secondItem="OzW-7r-h3O" secondAttribute="bottom" constant="16" id="5hc-Vx-e29"/>
                                     <constraint firstAttribute="trailing" secondItem="OzW-7r-h3O" secondAttribute="trailing" constant="16" id="AKV-xx-McR"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="naK-7k-ywa" secondAttribute="trailing" constant="20" symbolic="YES" id="IZ4-97-nTB"/>
+                                    <constraint firstAttribute="trailing" secondItem="naK-7k-ywa" secondAttribute="trailing" constant="20" symbolic="YES" id="IZ4-97-nTB"/>
                                     <constraint firstItem="fa1-z2-gaX" firstAttribute="centerX" secondItem="jXG-1A-EnK" secondAttribute="centerX" id="JyI-pg-qeJ"/>
                                     <constraint firstItem="Wtp-NF-gR1" firstAttribute="leading" secondItem="jXG-1A-EnK" secondAttribute="leading" constant="16" id="LsW-we-Dup"/>
                                     <constraint firstItem="naK-7k-ywa" firstAttribute="leading" secondItem="fa1-z2-gaX" secondAttribute="leading" id="U9k-6S-f2W"/>
@@ -123,9 +123,14 @@
                             <constraint firstItem="jXG-1A-EnK" firstAttribute="leading" secondItem="z6I-Co-0n3" secondAttribute="leading" id="oS1-P5-UHM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="TPi-FS-zh0"/>
+                    <navigationItem key="navigationItem" title="Profile" id="TPi-FS-zh0">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isNavigationBarHidden" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
                     <connections>
                         <outlet property="HeaderView" destination="jXG-1A-EnK" id="LAV-vA-271"/>
+                        <outlet property="navigationBar" destination="TPi-FS-zh0" id="urj-EG-CaW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwS-K6-ZGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
